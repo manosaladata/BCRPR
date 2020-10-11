@@ -48,9 +48,9 @@ require(plyr)
 
 importbcrp<-function(x,y,z){
   for (i in 1){
-  # Indicamos el ID, el formato, las fechas y el idioma. Llamamos "url" a esta combinación
+  # Llamar al Url 
   url <-paste('https://estadisticas.bcrp.gob.pe/estadisticas/series/api/',x,'/json/',y,'/',z,'/', sep="") 
-  # Descargamos el url indicado
+  # Descargamos el url 
   tmp1  <- fromJSON(readLines(url, warn="F"))
   # Cambiamos el formato de los datos y cambiamos el valor de las variables con missing values.
   dato <-as.data.frame(lapply(tmp1$periods, function(y) gsub("n.d.", "-99999.99", y))) 
@@ -60,7 +60,13 @@ importbcrp<-function(x,y,z){
 }
 }
 
-importbcrp(PN01205PM,'2005-8','2020-9')
+# Probando la funcion 
+importbcrp('PN01205PM','2005-8','2020-9')
+
+
+
+
+
 
 
 
