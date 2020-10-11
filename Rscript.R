@@ -29,12 +29,12 @@ data$periods
 
 #############################################
 
-install.packages('jsonlite')
-install.packages('ggplot2')
-install.packages('tidyverse')
-install.packages('lubridate')
-install.packages('dplyr')
-install.packages("readxl")
+#install.packages('jsonlite')
+#install.packages('ggplot2')
+#install.packages('tidyverse')
+#install.packages('lubridate')
+#install.packages('dplyr')
+#install.packages("readxl")
 require(jsonlite)
 require(ggplot2)
 require(lubridate)
@@ -46,8 +46,9 @@ require(tidyr)
 library(dplyr)
 require(plyr)
 
+#Creando función para importar datos 
+
 importbcrp<-function(x,y,z){
-  for (i in 1){
   # Llamar al Url 
   url <-paste('https://estadisticas.bcrp.gob.pe/estadisticas/series/api/',x,'/json/',y,'/',z,'/', sep="") 
   # Descargamos el url 
@@ -57,12 +58,15 @@ importbcrp<-function(x,y,z){
   # Cambiamos el nombre del archivo usando el ID que lo identifica.
   names(dato) <- c("Fecha",paste("",x,"",sep=""))
   View(dato)
-}
+  # Guardar en csv
+  write.csv2(dato, file=paste(x,'.csv', sep=""))
+  #  }, error=function(e){})
 }
 
-# Probando la funcion 
+#Probando la funcion 
 importbcrp('PN01205PM','2005-8','2020-9')
 
+2+4
 
 
 
@@ -71,13 +75,13 @@ importbcrp('PN01205PM','2005-8','2020-9')
 
 
 
+#Generating columns of characters with each ID
+metadato <- c('PN03371FQ')
 
-importbcrp<-function(x,y,z){
-metadato <- c('x')
 for (i in 1:length(metadato)){
   #  tryCatch({
   # Indicamos el ID, el formato, las fechas y el idioma. Llamamos "url" a esta combinación
-  url <-paste('https://estadisticas.bcrp.gob.pe/estadisticas/series/api/',metadato[i],'/json/',y,'/',z,'/', sep="") 
+  url <-paste('https://estadisticas.bcrp.gob.pe/estadisticas/series/api/',metadato[i],'/json/1940/2018/ing', sep="") 
   # Descargamos el url indicado
   tmp1  <- fromJSON(readLines(url, warn="F"))
   # Cambiamos el formato de los datos y cambiamos el valor de las variables con missing values.
@@ -85,15 +89,10 @@ for (i in 1:length(metadato)){
   # Cambiamos el nombre del archivo usando el ID que lo identifica.
   names(dato) <- c("name",paste("",metadato[i],"",sep=""))
   # Creamos un nuevo documento indicando el formato
-  # El formato "dta" se usa en el software Stata
-  write.dta(dato, file=paste(metadato[i],'.dta', sep=""))
   # El formato "csv" se puede usar en distintos softwares incluído Excel
   write.csv2(dato, file=paste(metadato[i],'.csv', sep=""))
   #  }, error=function(e){})
 }
-}
-
-
 
 
 
