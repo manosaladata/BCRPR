@@ -75,6 +75,31 @@ importbcrp('PN01205PM','2005-8','2020-9')
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #Generating columns of characters with each ID
 metadato <- c('PN03371FQ')
 
