@@ -27,7 +27,7 @@ data = fromJSON(rawToChar(per$content))
 names(data)
 data$periods
 
-
+#############################################
 
 install.packages('jsonlite')
 install.packages('ggplot2')
@@ -47,7 +47,7 @@ library(dplyr)
 require(plyr)
 
 importbcrp<-function(x,y,z){
-  
+  for (i in 1){
   # Indicamos el ID, el formato, las fechas y el idioma. Llamamos "url" a esta combinación
   url <-paste('https://estadisticas.bcrp.gob.pe/estadisticas/series/api/',x,'/json/',y,'/',z,'/', sep="") 
   # Descargamos el url indicado
@@ -56,14 +56,36 @@ importbcrp<-function(x,y,z){
   dato <-as.data.frame(lapply(tmp1$periods, function(y) gsub("n.d.", "-99999.99", y))) 
   # Cambiamos el nombre del archivo usando el ID que lo identifica.
   names(dato) <- c("Fecha",paste("",x,"",sep=""))
-  dato
-  write.table(dato, "misdatos.txt", sep = "\t", quote = F, row.names = F)
- 
+  View(dato)
+}
 }
 
+importbcrp(PN01205PM,'2005-8','2020-9')
 
-importbcrp('PN01205PM','2005-8','2020-9')
 
+
+
+
+importbcrp<-function(x,y,z){
+metadato <- c('x')
+for (i in 1:length(metadato)){
+  #  tryCatch({
+  # Indicamos el ID, el formato, las fechas y el idioma. Llamamos "url" a esta combinación
+  url <-paste('https://estadisticas.bcrp.gob.pe/estadisticas/series/api/',metadato[i],'/json/',y,'/',z,'/', sep="") 
+  # Descargamos el url indicado
+  tmp1  <- fromJSON(readLines(url, warn="F"))
+  # Cambiamos el formato de los datos y cambiamos el valor de las variables con missing values.
+  dato <-as.data.frame(lapply(tmp1$periods, function(y) gsub("n.d.", "-99999.99", y))) 
+  # Cambiamos el nombre del archivo usando el ID que lo identifica.
+  names(dato) <- c("name",paste("",metadato[i],"",sep=""))
+  # Creamos un nuevo documento indicando el formato
+  # El formato "dta" se usa en el software Stata
+  write.dta(dato, file=paste(metadato[i],'.dta', sep=""))
+  # El formato "csv" se puede usar en distintos softwares incluído Excel
+  write.csv2(dato, file=paste(metadato[i],'.csv', sep=""))
+  #  }, error=function(e){})
+}
+}
 
 
 
