@@ -1,0 +1,13 @@
+Package:BCRPR
+Title: Paquete para importar datos BCRP 2020
+Version: 0.0.0.9000
+Authors@R: 
+    person("Jhon", "Figueroa", email = "asrodeno18@gmail.com", role = c("aut", "cre"))
+Description:Este paquete contiene el codigo y los datasets oficiales. Se utiliza como metodo de distribucion de materiales del curso y tambien para ejemplificar la construccion de paquetes de R y su documentacion usando roxygen2 a traves de devtools.
+Depends: R (>= 3.3.2)
+Imports:
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
