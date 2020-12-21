@@ -1,5 +1,5 @@
-Package:BCRPR
-Title: Paquete para importar datos BCRP 2020
+Package: BCRPR
+Title: BCRPR
 Version: 0.0.0.9000
 Authors@R: 
     person("Jhon", "Figueroa", email = "asrodeno18@gmail.com", role = c("aut", "cre"))
