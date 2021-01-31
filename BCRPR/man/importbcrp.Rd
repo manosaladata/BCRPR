@@ -2,7 +2,7 @@
 % Please edit documentation in R/importbcrp.R
 \name{importbcrp}
 \alias{importbcrp}
-\title{ImportBCRP}
+\title{importbcrpr}
 \usage{
 importbcrp(x, y, z)
 }
@@ -10,9 +10,8 @@ importbcrp(x, y, z)
 \item{x}{A numeric vector}
 }
 \description{
-A function to compute the mean of a vector
+importbcrpr
 }
 \examples{
 importbcrp('PN01205PM','2005-8','2020-9')
-\dontrun{ mean(1:1e99) }
 }

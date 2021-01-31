@@ -3,10 +3,10 @@
 #' @param x A numeric vector
 #' @keyword importbcrp
 #' @importFrom base sum
+#' @export importbcrp
 #' @examples
 #' importbcrp('PN01205PM','2005-8','2020-9')
-#' @export
-importbcrp<-function(x,y,z){
+  importbcrp<-function(x,y,z){
   # Llamar al Url
   url <-paste('https://estadisticas.bcrp.gob.pe/estadisticas/series/api/',x,'/json/',y,'/',z,'/', sep="")
   # Descargamos el url
