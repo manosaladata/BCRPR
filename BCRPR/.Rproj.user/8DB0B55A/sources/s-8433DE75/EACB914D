@@ -1,24 +1,24 @@
 {
-    "id": "61B2B655",
-    "path": "~/GitHub/BCRPR1/BCRPR/DESCRIPTION",
-    "project_path": "DESCRIPTION",
-    "type": "dcf",
-    "hash": "1162480805",
+    "id": "EACB914D",
+    "path": "~/GitHub/BCRPR1/BCRPR/R/importbcrp.R",
+    "project_path": "R/importbcrp.R",
+    "type": "r_source",
+    "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1612129871870.0,
+    "created": 1612136350181.0,
     "source_on_save": false,
     "relative_order": 2,
     "properties": {
-        "cursorPosition": "10,0",
+        "cursorPosition": "25,0",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1612130104,
+    "lastKnownWriteTime": 1612127158,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1612130104,
+    "last_content_update": 1612127158,
     "read_only": false,
     "read_only_alternatives": []
 }
