@@ -71,7 +71,9 @@ utilizando el siguiente script:
     inflacion<-importbcrp('PM05217PA','2010','2020')
     plot(inflacion,type = "o",main = "Inflación Anual 2010-2020")
 
-<img src="man/Rplot.png" align="center" />
+
+![Aquí la descripción de la imagen por si no carga](https://github.com/manosaladata/BCRPR/blob/master/BCRPR/man/Rplot.png)
+
 
 Codigo de conducta
 ------------------
