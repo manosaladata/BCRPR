@@ -1,5 +1,5 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-BCRPR <img src="man/figures/logo.png" align="right" height="140" width="139"/>
+BCRPR 
 =============================================================================
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
