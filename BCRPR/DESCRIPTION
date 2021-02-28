@@ -5,6 +5,7 @@ Version: 0.1.0
 Author: Jhon Figueroa
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: Importar datos del BCRP
+Licence: 1.0
 Imports:
     jsonlite,
     ggplot2,
