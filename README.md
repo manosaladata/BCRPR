@@ -4,8 +4,8 @@ BCRPR
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 
-BCRPR es un paquete disenado para trabajar facilmente con data publica del
-BCRP.
+BCRPR es un paquete disenado para trabajar facilmente con data publica del BCRP. 
+Aprende a utilizarlo en <https://manosaladata.github.io/BCRPR/>.
 
 Instalacion
 -----------
