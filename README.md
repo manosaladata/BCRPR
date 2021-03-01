@@ -72,7 +72,7 @@ utilizando el siguiente script:
     plot(inflacion,type = "o",main = "Inflación Anual 2010-2020")
 
 
-![Aquí la descripción de la imagen por si no carga](https://github.com/manosaladata/BCRPR/blob/master/BCRPR/man/Rplot.png)
+![Aquí la descripción de la imagen por si no carga](https://github.com/manosaladata/BCRPR/blob/master/Rplot.png)
 
 
 Codigo de conducta
