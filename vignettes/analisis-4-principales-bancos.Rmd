@@ -1,0 +1,192 @@
+---
+title: "Analizando a los 4 Principales Bancos de Peru"
+author: "Arturo Chian"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Analizando a los 4 Principales Bancos de Peru}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Utilizemos el poder de R y BEST para analizar los 4 principales bancos. Primero activemos los paquetes!
+
+```{r, eval = T,message=FALSE,warning=FALSE,results='asis'}
+packs=c("SBSR","xts","dplyr","tidyr","dygraphs","ggplot2","reshape2","lubridate")
+invisible(lapply(packs,library,character=T))
+
+data("bancos")
+bd<-bancos %>% filter (Entidad %in% c("BCP","BBVA","Scotiabank","Interbank"))
+
+```
+
+## Riesgo de credito
+
+### Morosidad 
+
+
+```{r, eval = T,message=FALSE,warning=FALSE,results='asis'}
+grafico1<-bd %>% select(Entidad,morosidad,Fecha)
+grafico1<-grafico1 %>%
+  spread(Entidad, morosidad)
+grafico1<-xts(grafico1[,2:5],order.by = as.Date(grafico1$Fecha))
+dygraph(grafico1)
+```
+
+### Morosidad Moneda Nacional
+
+```{r, eval = T,message=FALSE,warning=FALSE,results='asis'}
+grafico2<-bd %>% select(Entidad,morosidad.MN,Fecha)
+grafico2<-grafico2 %>%
+  spread(Entidad, morosidad.MN)
+grafico2<-xts(grafico2[,2:5],order.by = as.Date(grafico2$Fecha))
+dygraph(grafico2)
+```
+
+### Morosidad Moneda Extranjera
+
+```{r, eval = T,message=FALSE,warning=FALSE,results='asis'}
+grafico3<-bd %>% select(Entidad,morosidad.ME,Fecha)
+grafico3<-grafico3 %>%
+  spread(Entidad, morosidad.ME)
+grafico3<-xts(grafico3[,2:5],order.by = as.Date(grafico3$Fecha))
+dygraph(grafico3)
+```
+
+### Ratio de Provisiones 
+
+```{r, eval = T,message=FALSE,warning=FALSE,results='asis'}
+grafico4<-bd %>% select(Entidad,provisiones,Fecha)
+grafico4<-grafico4 %>%
+  spread(Entidad, provisiones)
+grafico4<-xts(grafico4[,2:5],order.by = as.Date(grafico4$Fecha))
+dygraph(grafico4)
+```
+
+### Ratio de creditos reestructurados y refinanciados
+
+```{r, eval = T,message=FALSE,warning=FALSE,results='asis'}
+grafico5<-bd %>% select(Entidad,creditos.rr,Fecha)
+grafico5<-grafico5 %>%
+  spread(Entidad, creditos.rr)
+grafico5<-xts(grafico5[,2:5],order.by = as.Date(grafico5$Fecha))
+dygraph(grafico5)
+```
+
+## Riesgo de Solvencia
+
+### Ratio Capital Global
+
+```{r, eval = T,message=FALSE,warning=FALSE,results='asis'}
+grafico<-bd %>% select(Entidad,Ratio.Capital.Global,Fecha)
+grafico<-grafico %>%
+  spread(Entidad, Ratio.Capital.Global)
+grafico<-xts(grafico[,2:5],order.by = as.Date(grafico$Fecha))
+dygraph(grafico)
+```
+
+### Apalancamiento
+
+```{r, eval = T,message=FALSE,warning=FALSE,results='asis'}
+grafico<-bd %>% select(Entidad,apalancamiento,Fecha)
+grafico<-grafico %>%
+  spread(Entidad,apalancamiento)
+grafico<-xts(grafico[,2:5],order.by = as.Date(grafico$Fecha))
+dygraph(grafico)
+```
+
+## Rentabilidad
+
+### ROE
+
+```{r, eval = T,message=FALSE,warning=FALSE,results='asis'}
+grafico<-bd %>% select(Entidad,ROE,Fecha)
+grafico<-grafico %>%
+  spread(Entidad, ROE)
+grafico<-xts(grafico[,2:5],order.by = as.Date(grafico$Fecha))
+dygraph(grafico)
+```
+
+### ROA
+
+```{r, eval = T,message=FALSE,warning=FALSE,results='asis'}
+grafico<-bd %>% select(Entidad,ROA,Fecha)
+grafico<-grafico %>%
+  spread(Entidad, ROA)
+grafico<-xts(grafico[,2:5],order.by = as.Date(grafico$Fecha))
+dygraph(grafico)
+```
+
+## Liquidez
+
+### Liquidez Moneda Nacional
+
+```{r, eval = T,message=FALSE,warning=FALSE,results='asis'}
+grafico<-bd %>% select(Entidad,liquidez.MN,Fecha)
+grafico<-grafico %>%
+  spread(Entidad, liquidez.MN)
+grafico<-xts(grafico[,2:5],order.by = as.Date(grafico$Fecha))
+dygraph(grafico)
+```
+
+### Liquidez Moneda Extranjera
+
+```{r, eval = T,message=FALSE,warning=FALSE,results='asis'}
+grafico<-bd %>% select(Entidad,liquidez.ME,Fecha)
+grafico<-grafico %>%
+  spread(Entidad, liquidez.ME)
+grafico<-xts(grafico[,2:5],order.by = as.Date(grafico$Fecha))
+dygraph(grafico)
+```
+
+### Caja Bancos Moneda Nacional
+
+```{r, eval = T,message=FALSE,warning=FALSE,results='asis'}
+grafico<-bd %>% select(Entidad,ratio.caja.banco.MN,Fecha)
+grafico<-grafico %>%
+  spread(Entidad, ratio.caja.banco.MN)
+grafico<-xts(grafico[,2:5],order.by = as.Date(grafico$Fecha))
+dygraph(grafico)
+```
+
+### Caja Bancos Moneda Extranjera
+
+```{r, eval = T,message=FALSE,warning=FALSE,results='asis'}
+grafico<-bd %>% select(Entidad,ratio.caja.banco.ME,Fecha)
+grafico<-grafico %>%
+  spread(Entidad, ratio.caja.banco.ME)
+grafico<-xts(grafico[,2:5],order.by = as.Date(grafico$Fecha))
+dygraph(grafico)
+```
+
+
+## Eficiencia
+
+### Depositos / Numero de Oficinas ( S/. Miles )
+
+```{r, eval = T,message=FALSE,warning=FALSE,results='asis'}
+grafico<-bd %>% select(Entidad,depositos,Fecha)
+grafico<-grafico %>%
+  spread(Entidad, depositos)
+grafico<-xts(grafico[,2:5],order.by = as.Date(grafico$Fecha))
+dygraph(grafico)
+```
+
+### Creditos Directos / Personal ( S/. Miles )
+
+```{r, eval = T,message=FALSE,warning=FALSE,results='asis'}
+grafico<-bd %>% select(Entidad,creditos.directos.personal,Fecha)
+grafico<-grafico %>%
+  spread(Entidad, creditos.directos.personal)
+grafico<-xts(grafico[,2:5],order.by = as.Date(grafico$Fecha))
+dygraph(grafico)
+```
+
+
