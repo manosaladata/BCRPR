@@ -4,8 +4,8 @@ BCRPR
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 
-BCRPR es un paquete disenado para trabajar facilmente con data publica del
-BCRP.
+BCRPR es un paquete disenado para trabajar facilmente con data publica del BCRP. 
+Aprende a utilizarlo en <https://manosaladata.github.io/BCRPR/>.
 
 Instalacion
 -----------
@@ -72,7 +72,7 @@ utilizando el siguiente script:
     plot(inflacion,type = "o",main = "Inflación Anual 2010-2020")
 
 
-![Aquí la descripción de la imagen por si no carga](https://github.com/manosaladata/BCRPR/blob/master/BCRPR/man/Rplot.png)
+![Aquí la descripción de la imagen por si no carga](https://github.com/manosaladata/BCRPR/blob/master/Rplot.png)
 
 
 Codigo de conducta
