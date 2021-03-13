@@ -3,7 +3,7 @@
     "path": "E:/GitHub/BCRPR/DESCRIPTION",
     "project_path": "DESCRIPTION",
     "type": "dcf",
-    "hash": "0",
+    "hash": "2344469587",
     "contents": "",
     "dirty": false,
     "created": 1615671754723.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "4,8",
+        "cursorPosition": "11,0",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1615672010,
+    "lastKnownWriteTime": 1615677986,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1615672010345,
+    "last_content_update": 1615677986704,
     "read_only": false,
     "read_only_alternatives": []
 }
