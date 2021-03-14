@@ -60,10 +60,44 @@
       </header><div class="row">
   <div class="contents col-md-9">
 
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 <div id="bcrpr" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#bcrpr" class="anchor"></a>BCRPR</h1></div>
-
+<!-- badges: start -->
+<!-- badges: end -->
+<p>El objetivo del paquete es Importar datos del BCRP</p>
+<div id="instalación" class="section level2">
+<h2 class="hasAnchor">
+<a href="#instalaci%C3%B3n" class="anchor"></a>Instalación</h2>
+<p>Tu puedes instlar esta versión de BCRPR en <a href="https://CRAN.R-project.org">CRAN</a> con:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"BCRPR"</span><span class="op">)</span></code></pre></div>
+<p>Version desarrollada <a href="https://github.com/">GitHub</a> con:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"manosaladata/BCRPR"</span><span class="op">)</span></code></pre></div>
+</div>
+<div id="ejemplo" class="section level2">
+<h2 class="hasAnchor">
+<a href="#ejemplo" class="anchor"></a>Ejemplo</h2>
+<p>Un ejemplo básico:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">inflacion</span><span class="op">&lt;-</span><span class="fu"><a href="reference/importbcrp.html">importbcrp</a></span><span class="op">(</span><span class="st">'PM05217PA'</span>,<span class="st">'2010'</span>,<span class="st">'2020'</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">inflacion</span>,type <span class="op">=</span> <span class="st">"o"</span>,main <span class="op">=</span> <span class="st">"Inflación Anual 2010-2020"</span><span class="op">)</span></code></pre></div>
+</div>
+</div>
+<div id="section" class="section level1">
+<h1 class="hasAnchor">
+<a href="#section" class="anchor"></a><img src="reference/figures/README-unnamed-chunk-3-1.png" width="100%">
+</h1>
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+</div>
+<div id="bcrpr-1" class="section level1">
+<h1 class="hasAnchor">
+<a href="#bcrpr-1" class="anchor"></a>BCRPR</h1>
+<p><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="lifecycle"></a></p>
 <p>BCRPR es un paquete disenado para trabajar facilmente con data publica del BCRP. Aprende a utilizarlo en <a href="https://manosaladata.github.io/BCRPR/" class="uri">https://manosaladata.github.io/BCRPR/</a>.</p>
 <div id="instalacion" class="section level2">
 <h2 class="hasAnchor">
@@ -78,24 +112,24 @@
 <div id="los-paquetes-nuevos-son-instalados-a-traves-de-la-funcion-installpackages-siempre-entre-comillas" class="section level1">
 <h1 class="hasAnchor">
 <a href="#los-paquetes-nuevos-son-instalados-a-traves-de-la-funcion-installpackages-siempre-entre-comillas" class="anchor"></a>Los paquetes nuevos son instalados a traves de la funcion install.packages(), siempre entre comillas</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"jsonlite"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"lubridate"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyr"</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"stringr)"</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"foreign"</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"readxl"</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"plyr"</span>)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"manosaladata/BCRPR"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"jsonlite"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"lubridate"</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyr"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"stringr)"</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"foreign"</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"readxl"</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"plyr"</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"manosaladata/BCRPR"</span>)</span></code></pre></div>
 <div id="instalacion-para-r-users" class="section level3">
 <h3 class="hasAnchor">
 <a href="#instalacion-para-r-users" class="anchor"></a>Instalacion para R Users</h3>
 <p>Instalemos primero los paquetes necesarios de forma inteligente! Usemos la siguiente funcion: copiala y pega en tu consola de R, o ponlo en un script y usa control control + enter.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instala la ultima version de nuestro paquete usando</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"manosaladata/BCRPR"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instala la ultima version de nuestro paquete usando</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"manosaladata/BCRPR"</span>)</span></code></pre></div>
 </div>
 <div id="activacion-de-paquetes" class="section level2">
 <h2 class="hasAnchor">
@@ -104,31 +138,46 @@
 <h3 class="hasAnchor">
 <a href="#activacion-para-principiantes" class="anchor"></a>Activacion para principiantes</h3>
 <p>Utilicemos la funcion <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> para activar los paquetes instalados.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(jsonlite)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(ggplot2)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(lubridate)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(stringr)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(foreign)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(tidyr)</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(plyr)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(jsonlite)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(ggplot2)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(lubridate)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(stringr)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(foreign)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(tidyr)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(plyr)</span></code></pre></div>
 </div>
 </div>
 <div id="a-probar-el-paquete" class="section level2">
 <h2 class="hasAnchor">
 <a href="#a-probar-el-paquete" class="anchor"></a>A probar el paquete!</h2>
 <p>El paquete cuenta con data de los bancos y lo puedes usar facilmente utilizando el siguiente script:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(BCRPR)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>inflacion<span class="ot">&lt;-</span><span class="fu">importbcrp</span>(<span class="st">'PM05217PA'</span>,<span class="st">'2010'</span>,<span class="st">'2020'</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(inflacion,<span class="at">type =</span> <span class="st">"o"</span>,<span class="at">main =</span> <span class="st">"Inflación Anual 2010-2020"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(BCRPR)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>inflacion<span class="ot">&lt;-</span><span class="fu">importbcrp</span>(<span class="st">'PM05217PA'</span>,<span class="st">'2010'</span>,<span class="st">'2020'</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(inflacion,<span class="at">type =</span> <span class="st">"o"</span>,<span class="at">main =</span> <span class="st">"Inflación Anual 2010-2020"</span>)</span></code></pre></div>
 <p><img src="https://github.com/manosaladata/BCRPR/blob/master/Rplot.png" alt="Aquí la descripción de la imagen por si no carga"></p>
 </div>
 <div id="codigo-de-conducta" class="section level2">
 <h2 class="hasAnchor">
 <a href="#codigo-de-conducta" class="anchor"></a>Codigo de conducta</h2>
 <p>Por favor considerar que este paquete cuenta con un <a href="CODE_OF_CONDUCT.html">Codigo de Conducta del Contribuidor</a>. Al participar en este proyecto o utilizarlo, se asume que estas de acuerdo con estos terminos.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>78b9911b3c694ca5e54385ba3cd90ac3e24dc999</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 </div>
 </div>
 
@@ -148,13 +197,7 @@
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
-<ul class="list-unstyled">
-<li><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="lifecycle"></a></li>
-</ul>
-</div>
-</div>
+  </div>
 </div>
 
 
