@@ -33,7 +33,12 @@ require(plyr)
 library(BCRPR)
 ```
 
-
+```{r }
+## Inflación
+library(BCRPR)
+inflacion<-importbcrp('PM05217PA','2010','2020')
+plot(inflacion,type = "o",main = "Inflación Anual 2010-2020")
+```
 
 
 
