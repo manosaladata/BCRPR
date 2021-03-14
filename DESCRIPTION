@@ -8,3 +8,4 @@ Description: Importar datos del BCRP de una manera sencilla.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.1.1
