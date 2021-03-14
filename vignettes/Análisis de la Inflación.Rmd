@@ -1,0 +1,40 @@
+---
+title: "Análisis de Inflación en el Perú"
+author: "Jhon Figueroa"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Análisis de Inflación en el Perú}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Identificaremos laS principales variables para determinar la inflación
+
+```{r, include = FALSE}
+## basic example code
+require(jsonlite)
+require(ggplot2)
+require(lubridate)
+require(stringr)
+library(foreign)
+library(readxl)
+library(tidyverse)
+require(tidyr)
+library(dplyr)
+require(plyr)
+library(BCRPR)
+```
+
+
+
+
+
+
