@@ -1,7 +1,7 @@
 
 #' @title importbcrpr
 #' @param x A numeric vector
-#' @keyword importbcrp
+#' @keyword internal
 #' @importFrom base sum
 #' @export importbcrp
 #' @examples

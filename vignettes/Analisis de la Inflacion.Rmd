@@ -1,10 +1,10 @@
 ---
-title: "Análisis de Inflación en el Perú"
+title: "Análisis de Inflacion en el Peru"
 author: "Jhon Figueroa"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Análisis de Inflación en el Perú}
+  %\VignetteIndexEntry{Analisis de Inflacion en el Peru}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
