@@ -10,7 +10,7 @@
   # Llamar al Url
   url <-paste('https://estadisticas.bcrp.gob.pe/estadisticas/series/api/',x,'/json/',y,'/',z,'/', sep="")
   # Descargamos el url
-  tmp1  <- fromJSON(readLines(url, warn="F"))
+  tmp1  <- jsonlite::fromJSON(readLines(url, warn="F"))
   # Cambiamos el formato de los datos y cambiamos el valor de las variables con missing values.
   dato <-as.data.frame(lapply(tmp1$periods, function(y) gsub("n.d.", "-99999.99", y)))
   # Cambiamos el nombre del archivo usando el ID que lo identifica.
